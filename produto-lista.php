@@ -4,7 +4,7 @@
 
 
 
-
+<div id="content">
 <div class="card">
 
   <?php if(array_key_exists("removido", $_GET) && $_GET['removido']=='true') { ?>
@@ -18,15 +18,15 @@
 
   
 
-<table class="table centered highlight ">
+<table class="centered responsive-table">
 
     <thead>
         <tr>
-          <th data-field="id">Nome</th>
-          <th data-field="name">Preço</th>
-          <th data-field="name">Descrição</th>
-          <th data-field="name">Categoria</th>
-          <th data-field="name">Ação</th>
+          <th  data-field="id">Nome</th>
+          <th  data-field="name">Preço</th>
+          <th  data-field="name">Descrição</th>
+          <th  data-field="name">Categoria</th>
+          <th  data-field="name">Ação</th>
         </tr>
     </thead>
 
@@ -45,10 +45,10 @@ foreach($produtos as $produto) {
   <td>
     <form action="remove-produto.php" method="post">
       <a class="btn-flat disabled" href="produto-altera-formulario.php?id=<?=$produto['id']?>">
-      <i class="material-icons " style="font-size: 2rem">edit</i></a>    
-      &nbsp;
+      <i class="material-icons edit" style="font-size: 2rem">edit</i></a>    
+      
       <input type="hidden" name="id" value="<?=$produto['id']?>" />
-      <button class="btn-flat disabled"><i class="material-icons " style="font-size: 2rem">delete</i></button>
+      <button class="btn-flat disabled"><i class="material-icons delete " style="font-size: 2rem">delete</i></button>
     </form>
  		
  	</td>
@@ -59,6 +59,9 @@ foreach($produtos as $produto) {
 </tbody>
 
 </table>
+
+
+</div>
 </div>
 </div>
 <?php include ("rodape.php");?>

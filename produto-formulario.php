@@ -7,7 +7,7 @@
 $categorias = listaCategorias($conexao);
    ?>
 
-
+<div id="content">
 <div class="card">
   <div class="card-content black-text">
     <div class="col l12 m12 s12">
@@ -50,7 +50,7 @@ $categorias = listaCategorias($conexao);
             <span class="lever"></span>
                Usado
            </label>
-         </div>
+         </div><br><br><br><br>
          </div>
 
 
@@ -70,5 +70,7 @@ $categorias = listaCategorias($conexao);
     </form>
   </div>
 </div>
+</div>
+
   
   <?php include ("rodape.php") ?>
