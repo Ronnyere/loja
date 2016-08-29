@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.5.0.2
+- https://www.phpmyadmin.net
+-
+- Host: localhost
+- Tempo de geração: 29/08/2016 às 21:47
+- Versão do servidor: 10.0.17-MariaDB
+- Versão do PHP: 5.6.14
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="loja" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="categorias">
+                CREATE TABLE `categorias` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `nome` varchar(255) DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="produtos">
+                CREATE TABLE `produtos` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `nome` varchar(255) DEFAULT NULL,
+                  `preco` decimal(10,2) DEFAULT NULL,
+                  `descricao` text,
+                  `categoria_id` int(11) DEFAULT NULL,
+                  `usado` tinyint(1) DEFAULT '0',
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Banco de dados: 'loja'
+    -->
+    <database name="loja">
+        <!-- Tabela categorias -->
+        <table name="categorias">
+            <column name="id">1</column>
+            <column name="nome">esporte</column>
+        </table>
+        <table name="categorias">
+            <column name="id">2</column>
+            <column name="nome">escolar</column>
+        </table>
+        <table name="categorias">
+            <column name="id">3</column>
+            <column name="nome">mobilidade</column>
+        </table>
+        <table name="categorias">
+            <column name="id">4</column>
+            <column name="nome">guloseimas</column>
+        </table>
+        <!-- Tabela produtos -->
+        <table name="produtos">
+            <column name="id">59</column>
+            <column name="nome">carro velho</column>
+            <column name="preco">150.00</column>
+            <column name="descricao">carro batido</column>
+            <column name="categoria_id">3</column>
+            <column name="usado">1</column>
+        </table>
+        <table name="produtos">
+            <column name="id">61</column>
+            <column name="nome">carro batido</column>
+            <column name="preco">15.00</column>
+            <column name="descricao">batido teste</column>
+            <column name="categoria_id">3</column>
+            <column name="usado">0</column>
+        </table>
+        <table name="produtos">
+            <column name="id">62</column>
+            <column name="nome">bicicleta</column>
+            <column name="preco">1400.00</column>
+            <column name="descricao">bicicleta de cros</column>
+            <column name="categoria_id">3</column>
+            <column name="usado">0</column>
+        </table>
+    </database>
+</pma_xml_export>
